@@ -21,8 +21,8 @@ class Pokemon
       SELECT * FROM pokemon WHERE id = ? LIMIT 1
     SQL
     db.execute(sql, id).map do |item|
-    Pokemon.new(id: item[0], name: item[1], type: item[2])
-
+      Pokemon.new(id: item[0], name: item[1], type: item[2])
+    end 
   end
 
 end
