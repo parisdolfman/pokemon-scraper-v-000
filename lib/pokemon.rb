@@ -22,7 +22,7 @@ class Pokemon
     SQL
     db.execute(sql, id).map do |item|
       Pokemon.new(id: item[0], name: item[1], type: item[2], db: db)
-    end
+    end.first
   end
 
 end
